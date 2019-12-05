@@ -24,4 +24,5 @@ I've used several jQuery functions and it helped me alot coding the game.
 ## Future plans: 
 make the game more user friendley by adding some animation, audio and score for each player.
 
-Link of the game:file:///Users/fatmake/fundamentals/project1/project1.html
+## Link of the game:
+file:///Users/fatmake/fundamentals/project1/project1.html - automatic!
