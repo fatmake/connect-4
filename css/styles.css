@@ -160,6 +160,14 @@ html {
 	width: 94px;
 
 }
+.red{
+	background-color: red;
+
+}
+.yellow{
+	background-color: yellow;
+
+}
 
 @media (max-width: 767px){
 
