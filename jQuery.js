@@ -19,7 +19,6 @@ $('document').ready(function(){
 				$("#coin"+j1+"-"+i).addClass("player2");
 				$('#p1').addClass('t'); //highlight the current players name
 				$('#p2').removeClass('t');
-							//yellowArray.push(j1+''+i);
 				turn++;
 				}
 				else{
@@ -29,15 +28,11 @@ $('document').ready(function(){
 					$('#p1').removeClass('t');
 					turn++;
 				}
-				checkWinner();
+				checkWinner();//check for the winner player
 
 			}
-					//console.log(redArray);//output: ["4-1", "3-1", "2-1", "1-1"]
 		
 		j1--;//next row
-
-		
-
 });
 
 
@@ -147,7 +142,7 @@ $('document').ready(function(){
 		/////columns//////
 		
 		for (var i = 1;i <= 4;i++){
-		//alert($("#coin"+4+"-"+i).hasClass('player2'));
+		
 			yellowCounter = 0;
 			redCounter = 0;
 		
@@ -155,88 +150,124 @@ $('document').ready(function(){
 				
 				if($("#coin"+j+"-"+i).hasClass('player2')){
 					yellowCounter++;
-					console.log(yellowCounter+' yellow');
-
 				}
 				if($("#coin"+j+"-"+i).hasClass('player1')){
 					redCounter++;
-					console.log(redCounter+' red');
 				}
 
 			}
-			
-
-		}
 			if(yellowCounter == 4 ){
 				alert('Player 2 WINS (col)!!');
 			}
 			if(redCounter == 4 ){
 				alert('Player 1 WINS (col)!!');
 			}
+			
+
+		}
+			
 
 		//////rows/////
 		    
 		for (var j = 1;j <= 4;j++){
-		//alert($("#coin"+1+"-"+i).css('background-color'));
-		yellowCounter = 0;
+		
+			yellowCounter = 0;
 			redCounter = 0;
 			
 			for (var i = 1;i <= 4;i++){
 				
-				if($("#coin"+j+"-"+i).hasClass('player2')){
+				if($("#coin"+j+"-"+i).hasClass('player2')){//increament the counter if the coin is yellow colored 
 					yellowCounter++;
 				}
-				if($("#coin"+j+"-"+i).hasClass('player1')){
+				if($("#coin"+j+"-"+i).hasClass('player1')){//increament the counter if the coin is red colored
 					redCounter++;
 				}
 
-			}	
-
-		}
-			if(yellowCounter == 4 ){
+			}
+			if(yellowCounter == 4 ){//if the total number of the colored coins = 4 (same color)
 				alert('Player 2 WINS (rows)!!');
 			}
 			else if(redCounter == 4 ){
 				alert('Player 1 WINS (rows)!!');
+			}	
+
 		}
+			
 
 
 		///////tie/////
 		var flag;
+		//nested for loop to go through all the grid
 		for (var i = 1; i<=4 ;i++){
 			for (var j = 4; j >= 1; j--){
-				//set all the cells to the original color=white
-				if($("#coin"+j+"-"+i).css('background-color') !== 'rgb(255, 255, 255)'){
-					flag=true;
+				
+				if($("#coin"+j+"-"+i).hasClass('player1') || $("#coin"+j+"-"+i).hasClass('player2')){//if the coins are already colored
+					flag = true;
 				}
 				else{
-					flag=false;
+					flag = false;
 				}
 
 			}
 		}
-		if(flag == true){
+		if(flag == true){//if all the grid is fully colored
 			alert("It's a tie");
 		}
 
 		////diagonal (left-right)////
-		/*var col = 1;
+		var flag2 = 0;
+		var flag1 = 0;
+		var col = 1;
 		var row = 4;
-		while(i <= 4){
-		if($("#coin"+row+"-"+col).attr('background-color') == 'rgb(255, 0, 0)'){
-					flag=true;
+
+		while(row >= 1){
+			
+				if($("#coin"+row+"-"+col).hasClass('player2')){//yellow
+					flag2++;
 				}
-				else{
-					flag=false;
+				if($("#coin"+row+"-"+col).hasClass('player1')){//red
+					flag1++;
 				}
 				row--;
+				col++;
 
 		}
-		col++;
+		
 
-		if(flag == true){
-			alert("Player 1 WINS!!");
-		}*/
+		if(flag1 == 4){
+			alert("Player 1 WINS (diagonal)!!");
+		}
+		if(flag2 == 4){
+			alert("Player 2 WINS (diagonal)!!");
+		}
+
+		////diagonal(right-left)////
+		flag2 = 0;
+		flag1 = 0;
+		col = 4;
+		row = 4;
+
+		while(row >= 1){
+			
+				if($("#coin"+row+"-"+col).hasClass('player2')){//yellow
+					flag2++;
+				}
+				if($("#coin"+row+"-"+col).hasClass('player1')){//red
+					flag1++;
+				}
+				row--;
+				col--;
+
+		}
+		
+
+		if(flag1 == 4){
+			alert("Player 1 WINS (diagonal)!!");
+		}
+		if(flag2 == 4){
+			alert("Player 2 WINS (diagonal)!!");
+		}
+
 	}
 
 
