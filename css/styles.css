@@ -1,0 +1,181 @@
+header {
+	display: flex;
+	justify-content: space-between;
+
+
+}
+
+.circle {
+	background-color: #E1714C;
+	border-radius: 50px;
+	height: 20px;
+	width: 20px;
+
+}
+
+.minus {
+	background-color: #0580dd;
+	border-radius: 10px;
+	height: 10px;
+	width: 30px;
+}
+
+.sega {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+
+}
+
+#p1 {
+	font-family: 'Press Start 2P', cursive;
+	color: red;
+}
+
+#p2 {
+	font-family: 'Press Start 2P', cursive;
+	color: yellow;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#btn {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
+
+.s1 {
+	font-family: 'Press Start 2P', cursive;
+}
+
+.s2 {
+	font-family: 'Press Start 2P', cursive;
+}
+
+aside {
+	display: inline-flex;
+	height: 200px;
+	width: 150px;
+	background-color: #00c50d;
+	padding:20px;
+	
+}
+
+button {
+	
+	background: linear-gradient(to bottom, #c7c5be 50%, #ffffff 50%);
+	background-color:	#c7c5be;
+	border-radius:	17px;
+	border:	1px solid #1f2f47;
+	display: flex;
+	cursor: pointer;
+	color: #000000;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 15px;
+	padding: 8px 23px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #263666;
+	margin-left: 10px;
+
+}
+
+.t {
+	 box-shadow: 0 12px 16px 0 rgba(225,225,225,0.24),0 17px 50px 0 rgba(225,225,225,0.19);
+}
+
+button:hover {
+	 box-shadow: 0 12px 16px 0 rgba(225,225,225,0.24),0 17px 50px 0 rgba(225,225,225,0.19);
+}
+
+button:active {
+	position:relative;
+	top:3px;
+}
+
+
+html {
+	background: linear-gradient(to bottom, #9900ff 0%, #000000 100%) no-repeat center fixed;
+	background-size: cover;
+}
+
+.parent_grid {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	display: inline-flex;
+	border: 5px solid #0000d2;
+	border-radius: 15px;
+	background-color: blue;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	height: 450px;
+	width: 450px;
+}
+
+#col1:hover {
+	background-color: #0003c7;
+
+}
+
+#col2:hover {
+	background-color: #0003c7;
+
+}
+
+#col3:hover {
+	background-color: #0003c7;
+
+}
+
+#col4:hover {
+	background-color: #0003c7;
+
+}
+
+.col{
+	height: 450px;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	justify-content: space-between;
+}
+
+#coin1-1,#coin1-2,#coin1-3,#coin1-4,#coin2-1,#coin2-2,#coin2-3,#coin2-4,#coin3-1,#coin3-2,#coin3-3,#coin3-4,#coin4-1,#coin4-2,#coin4-3,#coin4-4{
+	
+	background-color: white;
+	border-radius: 50px;
+	height: 94px;
+	width: 94px;
+
+}
+
+@media (max-width: 767px){
+
+	.parent_grid {
+		width: 65%;
+		margin-left: 5%;
+	}
+
+	main {
+	  display: flex;
+      justify-content: flex-start;
+	}
+
+
+
+}
+
+
+
