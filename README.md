@@ -10,4 +10,6 @@ the most entertianing part was styling the game and inserting the markers inside
 
 I've used functions like addClass(),removeClass() to indicate which players turn is it.
 
+Future plans: make the game more user friendley by adding some animation, audio and score for each player.
+
 Link of the game:file:///Users/fatmake/fundamentals/project1/project1.html
