@@ -1,3 +1,3 @@
 # connect-4
 
-dom,background,arrays,psuedo classes.
+html,javascript,css,jquery.
