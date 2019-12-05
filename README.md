@@ -7,7 +7,7 @@
 * jQuery.
 
 ## Wireframes and User Senario:
-![wireframes](/images/wireframes.jpg)
+![wireframes](/images/wireframes.JPG)
 
 ## Development process: 
 first,i've started by creating the grid where the markers will be in.next,i've used jqeury to insert the markers inside the grid.after that i started styling the game.finally, i tried to determine the winner.
